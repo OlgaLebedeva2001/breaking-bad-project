@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breaking Bad</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body class="page">
+    <section class="page__header header">
+      <img src="./images/header-logo.png" alt="" class="header__logo" />
+      <div class="header__line"></div>
+    </section>
+    <section class="page__main main">
+      <div class="main__profile profile">
+        <div class="profile__avatar"></div>
+        <div class="profile__part">
+          <div class="profile__info info">
+            <div class="info__date">
+              <p class="info__name">Heisenberg</p>
+              <p class="info__about">Варю мет, преподаю химию</p>
+            </div>
+            <div class="info__edit-button"></div>
+          </div>
+          <div class="profile__add-button"></div>
+        </div>
+      </div>
+      <div class="main__elements elements">
+        <!-- Темплейт элемент -->
+        <template class="cardTemplate">
+          <div class="elements__element element">
+            <img src="" alt="" class="element__img" />
+            <button class="element__trash-icon"></button>
+            <div class="element__description description">
+              <div class="description__text"></div>
+              <div class="description__like"></div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+    <section class="page__footer footer">
+      <p class="footer__logo">© 2023 Breaking Bad</p>
+    </section>
+    <!-- попап редактирвоания профиля -->
+    <div class="popup editPopup">
+      <div class="popup__container">
+        <p class="popup__title">Редактировать профиль</p>
+        <form action="submit" class="editPopup__form">
+          <input type="text" value="" class="popup__input popup__input-name" />
+          <input type="text" value="" class="popup__input popup__input-about" />
+          <button class="popup__save">Сохранить</button>
+        </form>
+        <div class="popup__close"></div>
+      </div>
+    </div>
+    <!-- попап добавления картинки -->
+    <div class="popup addPopup">
+      <div class="popup__container">
+        <p class="popup__title">Новое место</p>
+        <form action="submit" class="addPopup__form">
+          <input
+            type="text"
+            value=""
+            class="popup__input popup__input-name"
+            placeholder="Название"
+          />
+          <input
+            type="text"
+            value=""
+            class="popup__input popup__input-about"
+            placeholder="Ссылка на картинку"
+          />
+          <button class="popup__save">Создать</button>
+        </form>
+        <div class="popup__close"></div>
+      </div>
+    </div>
+    <!-- попап изображения -->
+    <div class="popup imgPopup">
+      <div class="popup__img-container">
+        <img src="./images/soulmates.jpeg" alt="" class="imgPopup__img" />
+        <p class="imgPopup__caption">dsdsdsdsd</p>
+        <div class="popup__close"></div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
